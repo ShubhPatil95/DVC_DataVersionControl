@@ -13,7 +13,7 @@ estimators:
         l1_ratio: 0.6
  
 path:
-  path: /home/shubham/dvc56/paths.yaml
+  path: /home/shubham/dvc57/paths.yaml
 
         
 

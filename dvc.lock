@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/Stage_1_Load_Save_Data.py
+    deps:
+    - path: src/Stage_1_Load_Save_Data.py
+      md5: 4ccba801634dfbcde7a066113d50d4cf
+      size: 919
+    outs:
+    - path: data/winequality.csv
+      md5: 7c92f1ee593c0fbd2ad8c67ba5c446df
+      size: 91999
+  train:
+    cmd: python src/Stage_2_Trainig_Evaluation.py
+    deps:
+    - path: data/winequality.csv
+      md5: 7c92f1ee593c0fbd2ad8c67ba5c446df
+      size: 91999
+    - path: src/Stage_2_Trainig_Evaluation.py
+      md5: df7746ece4442ffe84cc2e17c2ad88bb
+      size: 2587
+    params:
+      params.yaml:
+        base.random_state: 42
+        split_data.test_size: 0.3
+    outs:
+    - path: model.joblib
+      md5: 441ca9ff46203d060bf3e64277c01fd4
+      size: 1227
+    - path: scores.json
+      md5: b66419ef856ce45c67d440e367dfae47
+      size: 97
