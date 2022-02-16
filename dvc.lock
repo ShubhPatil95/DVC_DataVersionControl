@@ -22,11 +22,11 @@ stages:
     params:
       params.yaml:
         base.random_state: 42
-        split_data.test_size: 0.7
+        split_data.test_size: 0.2
     outs:
     - path: model.joblib
-      md5: fe04b4c9b48158c0671c7450d0e9203d
+      md5: 4dfa22e7d850c8dc1e2492a5735c6466
       size: 1227
     - path: scores.json
-      md5: 81d0e5570675df25adde293c10c87487
-      size: 97
+      md5: be91abfd048b50107487d84e15650395
+      size: 94
