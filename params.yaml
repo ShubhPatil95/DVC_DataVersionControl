@@ -4,7 +4,7 @@ base:
   target_col: quality
   
 split_data:
-  test_size: 0.3
+  test_size: 0.7
 
 estimators:
   ElasticNet:
