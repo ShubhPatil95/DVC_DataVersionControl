@@ -1,0 +1,11 @@
+data_source:
+  s3_source: /home/shubham/dvc56/data_given/winequality.csv
+  
+load_data:
+  raw_dataset_csv: /home/shubham/dvc56/data/winequality.csv
+
+reports:
+  scores: /home/shubham/dvc56/scores.json
+  
+model_dir: 
+  model_dir: /home/shubham/dvc56/

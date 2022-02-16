@@ -1,0 +1,20 @@
+stages:
+  prepare:
+    cmd: python src/Stage_1_Load_Save_Data.py
+    deps:
+    - src/Stage_1_Load_Save_Data.py
+    outs:
+    - data/winequality.csv
+  train:
+    cmd: python src/Stage_2_Trainig_Evaluation.py
+    deps:
+    - data/winequality.csv
+    - src/Stage_2_Trainig_Evaluation.py
+    params:
+    - base.random_state
+    - split_data.test_size
+    metrics:
+    - scores.json:
+        cache: false
+    outs:
+    - model.joblib

@@ -1,0 +1,21 @@
+base:
+  project: winequality-project
+  random_state: 42
+  target_col: quality
+  
+split_data:
+  test_size: 0.3
+
+estimators:
+  ElasticNet:
+    params:
+        alpha: 0.7
+        l1_ratio: 0.6
+ 
+path:
+  path: /home/shubham/dvc56/paths.yaml
+
+        
+
+
+
